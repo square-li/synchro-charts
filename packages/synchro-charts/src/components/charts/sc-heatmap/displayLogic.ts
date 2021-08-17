@@ -50,7 +50,7 @@ export const getYBucketHeight = (viewport: ViewPort): number => {
 };
 
 /**
- * Creates a gradient between the hex code of the min, mid, and max colors.
+ * Creates a gradient between the hex code of the provided colors.
  */
 export const getSequential = (
   heatValues: HeatValueMap,
@@ -105,7 +105,7 @@ export const getBucketColor = ({
 }): number[] => {
   const { minHeatValue, maxHeatValue } = heatValues;
   const { bucketHeatValue } = heatValues[xBucket][yBucket];
-  const heatValueRange = Math.min(maxHeatValue - minHeatValue + 1, MAX_NUM_OF_COLORS_SEQUENTIAL);
+  const heatValueRange = maxHeatValue - minHeatValue + 1;
   const numOfColors = colorPalette.r.length;
 
   if (bucketHeatValue === maxHeatValue) {

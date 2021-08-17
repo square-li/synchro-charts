@@ -54,8 +54,9 @@ export class ScHeatmapTooltipRows {
 
     const selectedXBucketMS = this.selectedXBucket.startDate.getTime();
     const { yMin, yMax } = this.viewport;
+    const { lowerYBucket, upperYBucket } = this.selectedYBucket;
     const bucketIndex = calculateBucketIndex({
-      yValue: this.selectedYBucket.lowerYBucket,
+      yValue: (lowerYBucket + upperYBucket) / 2,
       yMax,
       yMin,
       bucketCount: BUCKET_COUNT,

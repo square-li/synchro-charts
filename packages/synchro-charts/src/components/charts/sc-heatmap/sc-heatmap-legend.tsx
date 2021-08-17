@@ -48,8 +48,8 @@ export class ScHeatmapLegend {
       return null;
     }
 
-    if (this.config.legendLabels?.title == null) {
-      return null;
+    if (this.config.legendLabels == null) {
+      this.config.legendLabels = { title: 'Number of data points' };
     }
 
     const xBucketRange = getXBucketRange(this.viewport);
