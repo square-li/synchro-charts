@@ -108,7 +108,7 @@ describe('getBucketColor', () => {
     };
     const colorPalette: HeatmapColorPalette = getSequential(tempHeatValues);
 
-    const midOpacityRGB = [colorPalette.r[3], colorPalette.g[3], colorPalette.b[3]];
+    const midOpacityRGB = [colorPalette.r[4], colorPalette.g[4], colorPalette.b[4]];
     const rgb = getBucketColor({ heatValues: tempHeatValues, xBucket: '123', yBucket: '1', colorPalette });
     expect(rgb).toEqual(midOpacityRGB);
   });
