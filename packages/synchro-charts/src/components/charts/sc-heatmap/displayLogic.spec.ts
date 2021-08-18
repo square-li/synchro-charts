@@ -99,9 +99,9 @@ describe('getBucketColor', () => {
       maxHeatValue: 9,
       '123': {
         '1': {
-          bucketHeatValue: 4,
+          bucketHeatValue: 5,
           streamCount: {
-            'data-stream-1': 4,
+            'data-stream-1': 5,
           },
         },
       },
