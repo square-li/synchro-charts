@@ -111,6 +111,6 @@ export const getBucketColor = ({
   if (bucketHeatValue === maxHeatValue) {
     return [colorPalette.r[numOfColors - 1], colorPalette.g[numOfColors - 1], colorPalette.b[numOfColors - 1]];
   }
-  const index = Math.floor(((bucketHeatValue - minHeatValue + 1) / heatValueRange) * numOfColors);
+  const index = Math.floor(((bucketHeatValue - minHeatValue) / heatValueRange) * numOfColors);
   return [colorPalette.r[index], colorPalette.g[index], colorPalette.b[index]];
 };
