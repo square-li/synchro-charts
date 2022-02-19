@@ -620,10 +620,6 @@ template {
   font-style: normal;
 }
 
-html {
-  font-size: 0.625rem;
-}
-
 .awsui {
   font-size: 1.4rem;
   line-height: 2rem;
